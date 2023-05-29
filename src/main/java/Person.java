@@ -24,8 +24,8 @@ public class Person {
         return !this.address.equals("Адресс неизвестен");
     }
 
-    public void setAddress(String city) {
-        this.address = city;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getAddress() {
