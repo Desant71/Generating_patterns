@@ -4,7 +4,6 @@ public class PersonBuilder {
     private int age = -1;
     private String address = "Адрес неизвестен";
 
-    //методы для заполнения полей билдером
 
     public PersonBuilder setName(String name) {
         this.name = name;
@@ -17,7 +16,6 @@ public class PersonBuilder {
     }
 
     public PersonBuilder setAge(int age) {
-//защитились от некорректных возрастов
         if (age < 0 || age > 150) {
             throw new IllegalArgumentException("Вы ввели некорректные данные");
         }
@@ -30,9 +28,7 @@ public class PersonBuilder {
         return this;
     }
 
-    //метод построения объекта из инициализированных полей
     public Person build() {
-//защитились от ввода недостаточного количества данных для минимального заполнения объекта
         if (name == null || surname == null) {
             throw new IllegalStateException("Вы не ввели обязательные поля");
         }

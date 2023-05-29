@@ -1,22 +1,21 @@
 public class Main {
     public static void main(String[] args) {
         Person mom = new PersonBuilder()
-                .setName("Любовь")
+                .setName("Юлия")
                 .setSurname("Филякина")
-                .setAge(53)
-                .setAddress("с.Никитское")
+                .setAge(30)
+                .setAddress("г.Одоев")
                 .build();
 
-        Person son = mom.newChildBuilder()
-                .setName("Никитa")
-                .setSurname("Филякин")
-                .setAge(28)
+        Person daughter = mom.newChildBuilder()
+                .setName("Милена")
+                .setAge(2)
                 .build();
 
-        son.happyBirthday();
-        son.setAddress("г.Тула");
+        daughter.happyBirthday();
+        daughter.setAddress("г.Тула");
 
-        System.out.println("У " + mom + " есть сын, " + son);
+        System.out.println("У " + mom + " есть дочь, " + daughter);
 
         try {
             // Не хватает обязательных полей

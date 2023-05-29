@@ -73,14 +73,11 @@ public class Person {
 
     @Override
     public int hashCode() {
-        int hash = 17; //стартовое значение для объектов Person
+        int hash = 27;
 
         if (name != null) {
             hash += name.hashCode();
         }
-
-        hash *= 31; //множитель для избежания ошибок при зеркальной смене значений полей
-
         if (surname != null) {
             hash += surname.hashCode();
         }
